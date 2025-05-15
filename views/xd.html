@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sostenibilitat i Incendis Forestals</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="showSection('inici')">Inici</a>
+    <a href="#" onclick="showSection('ods13')">ODS 13</a>
+    <a href="#" onclick="showSection('ods15')">ODS 15</a>
+    <a href="#" onclick="showSection('prevencio')">Prevenció</a>
+    <a href="#" onclick="showSection('contacte')">Contacte</a>
+  </nav>
+
+  <div class="content">
+    <section id="inici" class="active">
+      <h1>Benvinguts a la web sobre Incendis Forestals</h1>
+      <p>Aquí trobaràs informació sobre sostenibilitat, acció climàtica i protecció dels boscos.</p>
+    </section>
+
+    <section id="ods13">
+      <h1>ODS 13 - Acció pel Clima</h1>
+      <p>Els incendis forestals són una de les conseqüències greus del canvi climàtic. Descobreix com actuar.</p>
+    </section>
+
+    <section id="ods15">
+      <h1>ODS 15 - Vida Terrestre</h1>
+      <p>Protegir la biodiversitat forestal és essencial per garantir un futur sostenible.</p>
+    </section>
+
+    <section id="prevencio">
+      <h1>Prevenció d'Incendis</h1>
+      <p>Aprèn bones pràctiques per prevenir els incendis i protegir el medi natural.</p>
+    </section>
+
+    <section id="contacte">
+      <h1>Contacte</h1>
+      <p>Envia'ns els teus dubtes, propostes o iniciatives de sostenibilitat.</p>
+    </section>
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
