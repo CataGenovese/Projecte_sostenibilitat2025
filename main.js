@@ -20,5 +20,5 @@ const readData=()=>{
 
 app.get("/", function(req, res) {
     const data = readData();
-    res.render("Forests",{data})
+    res.render("xd",{data})
 });
