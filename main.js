@@ -1,1 +1,0 @@
-//Hacer get de API 2025 y JSON (2011 - 2024)
