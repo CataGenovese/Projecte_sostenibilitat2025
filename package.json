@@ -1,7 +1,7 @@
 {
   "name": "oniichan",
   "version": "2.0.0",
-  "main": "main.js",
+"main": "../main.js",
   "type": "module",
   "scripts": {
     "dev": "node main.js"

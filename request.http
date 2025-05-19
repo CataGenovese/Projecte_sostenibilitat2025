@@ -1,9 +1,8 @@
-GET http://localhost:3000/incendis
+GET http://localhost:3005/incendis
 
 ###
 <!-- utilitzem el endpoint 8 per localitzar el camp "CODI_COMARCA"-->
-GET http://localhost:3000/incendis/8  
-
+GET http://localhost:3000/incendis/comarca/8
 ###
 
 <!--POST http://localhost:3000/books HTTP/1.1
