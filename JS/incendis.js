@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
 });
 
 // GET /incendios/comarca/:codi_comarca → devuelve incendios que tengan un CODI_COMARCA concreto
-router.get("/comarca/:codi_comarca", (req, res) => {
+router.get("/comarca/codi_comarca", (req, res) => {
   const data = readIncendios();
   const codiComarca = parseInt(req.params.codi_comarca);
   const incendios = data.filter(i => i.CODI_COMARCA === codiComarca);
