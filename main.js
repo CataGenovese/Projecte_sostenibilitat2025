@@ -5,7 +5,6 @@ import bodyParser from "body-parser";
 import incendisRoutes from "./JS/incendis.js"
 
 import json from "./JS/incendis.js";
-import mapa from "./JS/mapa.js";
 
 const app = express();
 app.use(bodyParser.json());
@@ -13,7 +12,6 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", "./views");
 app.use("/",json)
-app.use("/mapa",mapa)
 
 
 const readData = () => {
@@ -26,6 +24,9 @@ const readData = () => {
     return [];
   }
 };
+
+// Rutas protegidas
+app.use("/incendis", incendisRoutes);
 
 //Ultima línea simpre. Función para escuchar
 app.listen(PORT, () => {
