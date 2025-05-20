@@ -1,6 +1,9 @@
+import { PORT } from './config.js'
 import express from "express";
 import fs from "fs";
 import bodyParser from "body-parser";
+import incendisRoutes from "./JS/incendis.js"
+
 import json from "./JS/incendis.js";
 import mapa from "./JS/mapa.js";
 
@@ -23,7 +26,8 @@ const readData = () => {
     return [];
   }
 };
-const PORT = 3005;
+
+//Ultima línea simpre. Función para escuchar
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });

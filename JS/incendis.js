@@ -13,11 +13,13 @@ const readIncendios = () => {
   return JSON.parse(rawData);
 };
 
+
 // GET /incendios → devuelve todos los incendios
 router.get("/", (req, res) => {
   const data = readIncendios();
   res.json(data);
 });
+
 
 // GET /incendios/comarca/:codi_comarca → devuelve incendios que tengan un CODI_COMARCA concreto
 router.get("/comarca/codi_comarca", (req, res) => {
@@ -32,6 +34,18 @@ router.get("/comarca/codi_comarca", (req, res) => {
   res.json(incendios);
 });
 
+// GET /incendios/municipi/:codi_municipi → devuelve incendios que tengan un CODI_MUNICIPI concreto
+router.get("/municipi/:codi_municipi", (req, res) => {
+  const data = readIncendios();
+  const codiMunicipi = parseInt(req.params.codi_municipi);
+  const incendios = data.filter(i => i.CODI_MUNICIPI === codiMunicipi);
+
+  if (incendios.length === 0) {
+    return res.status(404).json({ error: "No se encontraron incendios para este municipi" });
+  }
+
+  res.json(incendios);
+});
 
 
 export default router;
