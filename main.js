@@ -10,8 +10,8 @@ app.set("views", "./views");
 
 const readData = () => {
   try {
-    const data = fs.readFileSync(".data/incendios.json", "utf-8");
-    log.console(data);
+    const data = fs.readFileSync("./data/incendios.json", "utf-8");
+    console.log(data);
     return JSON.parse(data);
   } catch (error) {
     console.error("Error leyendo o parseando incendios.json:", error);
