@@ -1,12 +1,17 @@
 import express from "express";
 import fs from "fs";
 import bodyParser from "body-parser";
+import json from "./JS/incendis.js";
+import mapa from "./JS/mapa.js";
 
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", "./views");
+app.use("/",json)
+app.use("/mapa",mapa)
+
 
 const readData = () => {
   try {
@@ -18,14 +23,6 @@ const readData = () => {
     return [];
   }
 };
-
-app.get("/", function (req, res) {
-  const data = readData();
-  console.log("Datos leídos:", data);
-  res.render("xd", { data });
-});
-
-
 const PORT = 3005;
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en http://localhost:${PORT}`);
