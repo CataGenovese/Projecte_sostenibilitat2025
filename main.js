@@ -24,6 +24,9 @@ const readData = () => {
   }
 };
 
+// Rutas protegidas
+app.use("/incendis", incendisRoutes);
+
 //Ultima línea simpre. Función para escuchar
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
