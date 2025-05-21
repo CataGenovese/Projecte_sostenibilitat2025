@@ -2,7 +2,6 @@ import { PORT } from './config.js'
 import express from "express";
 import fs from "fs";
 import bodyParser from "body-parser";
-
 import json from "./JS/incendis.js";
 
 const app = express();
@@ -23,9 +22,6 @@ const readData = () => {
     return [];
   }
 };
-
-// Rutas protegidas
-app.use("/incendis", incendisRoutes);
 
 //Ultima línea simpre. Función para escuchar
 app.listen(PORT, () => {
