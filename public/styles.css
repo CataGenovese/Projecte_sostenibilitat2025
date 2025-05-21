@@ -33,14 +33,10 @@ body {
     color: #1b5e20;
   }
 
-  section {
-    display: none;
-    margin-top: 2rem;
+  h2 {
+    color: #2e7d32;
   }
-
-  section.active {
-    display: block;
-  }
+  
 
   #map_inc {
   height: 500px;

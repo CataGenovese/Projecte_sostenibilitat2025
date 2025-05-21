@@ -20,6 +20,10 @@ router.get("/", (req, res) => {
   res.render("test",{data})
 });
 
+router.get("/ODS13", (req,res) => {
+  res.render("ODS13")
+});
+
 
 // GET /incendios/comarca/:codi_comarca → devuelve incendios que tengan un CODI_COMARCA concreto
 router.get("/comarca/codi_comarca", (req, res) => {

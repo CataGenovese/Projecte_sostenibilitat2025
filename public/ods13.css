@@ -1,0 +1,85 @@
+/* styles.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #e9f5ec, #cce5d4);
+    color: #2e4d34;
+    padding: 2rem;
+  }
+  
+  /* Headings */
+  h1 {
+    font-size: 2.5rem;
+    color: #256d3b;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #388e3c;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  h3 {
+    color: #2d5e3e;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Section Styling */
+  section {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 6px solid #4caf50;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 50, 0, 0.1);
+  }
+  
+  /* Paragraphs */
+  p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Lists */
+  ul {
+    padding-left: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+  }
+  
+  /* Strong tags */
+  strong {
+    color: #1b5e20;
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 600px) {
+    body {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
