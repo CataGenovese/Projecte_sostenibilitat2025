@@ -17,7 +17,7 @@ const readIncendios = () => {
 // GET /incendios → devuelve todos los incendios
 router.get("/", (req, res) => {
   const data = readIncendios();
-  res.render("xd",{data})
+  res.render("test",{data})
 });
 
 

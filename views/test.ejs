@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+<body>
+    <header>
+        <ul><li><a href="/">↺</a></li></ul>
+        <h1>Gestió d'recursos per <%= user.name %>!</h1>
+        <h2><%- htmlMessage %></h2>
+    </header>
+    <main>
+        <section>
+            <h2>Llista d'recursos</h2>
+            <ul class="recurs-list">
+                <% data.Recursos.forEach(recurs => { %>
+                    <li class="recurs-item">
+                        <strong><%= recurs.Tipus %>:</strong>
+                        <span><%= recurs.Estat %></span>
+                        <a href="/Recursos/<%= recurs.RecursId %>">Detalls</a>
+                        <a href="/Notis/<%= noti.UsuariId %>">Editar</a>
+                    </li>
+                <% }) %>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
