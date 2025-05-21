@@ -23,6 +23,9 @@ const readData = () => {
   }
 };
 
+
+
+
 //Ultima línea simpre. Función para escuchar
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
