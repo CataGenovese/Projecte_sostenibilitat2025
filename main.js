@@ -12,21 +12,6 @@ app.set("views", "./views");
 app.use("/",json)
 
 
-const readData = () => {
-  try {
-    const data = fs.readFileSync("./data/incendios.json", "utf-8");
-    console.log(data);
-    return JSON.parse(data);
-  } catch (error) {
-    console.error("Error leyendo o parseando incendios.json:", error);
-    return [];
-  }
-};
-
-
-
-
-//Ultima línea simpre. Función para escuchar
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

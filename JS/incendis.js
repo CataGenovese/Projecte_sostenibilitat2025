@@ -24,6 +24,10 @@ router.get("/ODS13", (req,res) => {
   res.render("ODS13")
 });
 
+router.get("/ODS15", (req,res) => {
+  res.render("ODS15")
+});
+
 
 // GET /incendios/comarca/:codi_comarca → devuelve incendios que tengan un CODI_COMARCA concreto
 router.get("/comarca/:codi_comarca", (req, res) => {
